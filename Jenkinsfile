@@ -13,9 +13,7 @@ pipeline {
             steps {
                 sh 'docker build -t myapp:v1 -f Dockerfile ./blue'
                 sh 'docker build -t myapp:v2 -f Dockerfile ./green'
-                sh 'minikube image load myapp:v1'
-                sh 'minikube image load myapp:v2'
-            }
+               }
         }
 
         stage('Deploy Blue') {
